@@ -1,4 +1,6 @@
 class HuntersController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @hunters = Hunter.all
   end
