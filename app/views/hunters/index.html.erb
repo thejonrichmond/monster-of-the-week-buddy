@@ -1,0 +1,11 @@
+<h1>Your Hunters</h1>
+
+<ul>
+  <% @hunters.each do |hunter| %>
+    <li>
+      <%= link_to hunter.name, hunter %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New Hunter", new_hunter_path %>
