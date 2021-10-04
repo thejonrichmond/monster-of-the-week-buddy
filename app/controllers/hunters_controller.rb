@@ -2,7 +2,7 @@ class HuntersController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @hunters = Hunter.all
+    @hunters = current_user.hunters
   end
 
   def show
@@ -14,7 +14,7 @@ class HuntersController < ApplicationController
   end
 
   def create
-    @hunter = Hunter.new hunter_params
+    @hunter = current_user.hunters.build hunter_params
     if @hunter.save
       redirect_to @hunter
     else
