@@ -5,3 +5,5 @@
 <ul>
   <li><%= link_to 'Edit', edit_hunter_path(@hunter) %></li>
   <li><%= link_to 'Delete', hunter_path(@hunter), method: :delete, data: { confirm: 'Are you sure you want to delete this Hunter?' } %></li>
+  <li><%= link_to 'Back to all hunters', hunters_path %></li>
+</ul>
