@@ -1,0 +1,30 @@
+@import 'variables';
+
+header {
+  width: 100%;
+  background-color: $dark-gray;
+  color: $white;
+  a {
+    color: $white;
+    &:link, &:visited, &:hover, &:active {
+      text-decoration: none;
+      color: $white;
+    }
+  }
+  nav {
+    padding: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 1em;
+  }
+  ul {
+    display: flex;
+    li {
+      margin: 0 0.5em;
+    }
+  }
+  .header__home-link {
+    font-size: 1.75em;
+  }
+}
