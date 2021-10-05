@@ -12,3 +12,8 @@
     </ul>
   </nav>
 </header>
+<% if notice %>
+  <div class="notice"><%= notice %></div>
+<% elsif alert %>
+  <div class="alert"><%= alert %></div>
+<% end %>
