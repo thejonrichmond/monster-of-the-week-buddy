@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_09_021002) do
+ActiveRecord::Schema.define(version: 2021_10_09_040739) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,11 @@ ActiveRecord::Schema.define(version: 2021_10_09_021002) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id"
     t.bigint "playbook_id", null: false
+    t.integer "charm"
+    t.integer "cool"
+    t.integer "sharp"
+    t.integer "tough"
+    t.integer "weird"
     t.index ["playbook_id"], name: "index_hunters_on_playbook_id"
     t.index ["user_id"], name: "index_hunters_on_user_id"
   end
@@ -30,6 +35,7 @@ ActiveRecord::Schema.define(version: 2021_10_09_021002) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.jsonb "ratings"
   end
 
   create_table "task_records", id: false, force: :cascade do |t|
