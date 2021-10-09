@@ -8,6 +8,14 @@
   </div>
 
   <div>
+    <%= form.label :playbook_id %><br />
+    <%= form.select :playbook_id, Playbook.pluck(:name, :id) %>
+    <% @hunter.errors.full_messages_for(:playbook_id).each do |error| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
     <%= form.label :description %><br>
     <%= form.text_area :description %>
     <% @hunter.errors.full_messages_for(:description).each do |error| %>
