@@ -46,6 +46,6 @@ class HuntersController < ApplicationController
   private
 
   def hunter_params
-    params.require(:hunter).permit(:name, :description)
+    params.require(:hunter).permit(:name, :description, :playbook_id)
   end
 end
